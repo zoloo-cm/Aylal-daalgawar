@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Инээдтэй даалгавар</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fffbe6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      background-color: #ffb84d;
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ffa31a;
+    }
+    .task-box {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #333;
+      max-width: 600px;
+      text-align: center;
+      background: #fff3d1;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Санаандгүй даалгавараа аваарай! 🌟</h1>
+  <button onclick="generateTask()">ДААЛГАВАР АВАХ</button>
+  <div class="task-box" id="task"></div>
+  <script>
+    const tasks = [
+      "Хэн нэгийг “Дарга аа” гэж дуудаж, улам хүндэтгэлтэй баримтай харьц!",
+      "Цэнхэр өнгийн аль нэг зүйлийг тохиролцоотойгоор од гэж дуудаж яв!",
+      "Одоогийн цагаас хойш 2 цагийн турш зүй тэнэг гоё чихмэл амьтан барьж яв!",
+      "Замд явж яваа танихгүй хүнээс “Өнөөдөр ямар өдөр вэ?” гэж асуугаарай!",
+      "Ямар нэгэн дууг 30 секундийн турш шивнэн дуул!",
+      "Өөрийнхөө нэрийг 3 өөр хэлбэрээр хэлээд бусдад тайлбарла!",
+      "Бүгдэд нэгэн зэрэг инээмсэглээд, яагаад инээж байгаагаа тайлбарлахгүй бай!",
+      "Ямар нэгэн түүх зохиогоод 1 минутын дотор найздаа яриад өг!",
+      "Гудамжинд явж байхад хэн нэгэнд гэнэт баяр хүргэ!",
+      "Өөр нэгэнд сонин асуулт тавиад, түүний хариуг тэмдэглэ!"
+    ];
+    function generateTask() {
+      const idx = Math.floor(Math.random() * tasks.length);
+      document.getElementById('task').innerText = tasks[idx];
+    }
+  </script>
+</body>
+</html>
